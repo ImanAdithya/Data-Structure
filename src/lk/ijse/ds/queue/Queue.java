@@ -13,10 +13,18 @@ public class Queue {
     }
 
     public void enqueue(int data) {
+
+        if (isFull ()){
+            grow();
+        }
+
         if (front==-1){
             front=0;
         }
         elementData[++rear]=data;
+    }
+
+    private void grow() {
     }
 
     public void printQueue() {
@@ -31,5 +39,13 @@ public class Queue {
 
     public void deQueue() {
         front++;
+    }
+
+    public int peek() {
+        return front;
+    }
+
+    public boolean isFull(){
+        return rear==elementData.length-1 || front>rear;
     }
 }

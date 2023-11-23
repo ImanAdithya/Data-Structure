@@ -15,5 +15,7 @@ public class Main {
 
         queue.printQueue();
 
+        queue.peek();
+
     }
 }
