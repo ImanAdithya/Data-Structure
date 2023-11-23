@@ -25,6 +25,10 @@ public class Queue {
     }
 
     private void grow() {
+        int [] temp=elementData;
+        elementData=new int[temp.length * 2];
+
+       System.arraycopy (temp,0,elementData,0,temp.length);
     }
 
     public void printQueue() {
@@ -33,7 +37,7 @@ public class Queue {
         for (int i = front; i <=rear ; i++) {
             System.out.print (elementData[i]+",");
         }
-        System.out.print ("\b]");
+        System.out.print (isEmpty () ? "Empty Queue]":"\b]");
 
     }
 
@@ -42,10 +46,25 @@ public class Queue {
     }
 
     public int peek() {
+
+        if (isEmpty ()){
+            System.err.println ("Queue is Empty");
+            return -1;
+        }
+
         return front;
     }
 
     public boolean isFull(){
         return rear==elementData.length-1 || front>rear;
+    }
+
+    public boolean isEmpty(){
+        return front==-1 || front>rear;
+    }
+
+    public void clear(){
+        front=-1;
+        rear=-1;
     }
 }
