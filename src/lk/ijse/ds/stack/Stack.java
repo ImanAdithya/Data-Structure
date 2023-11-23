@@ -41,7 +41,7 @@ public class Stack {
     }
 
     public int size() {
-       return elementData.length;
+       return top+1;
     }
 
     public void clear(){
