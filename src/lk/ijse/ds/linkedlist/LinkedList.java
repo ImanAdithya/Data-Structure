@@ -65,6 +65,22 @@ public class LinkedList {
      }
 
      public void deleteAtBeginning(){
+
+        if (head==null){
+            System.out.println ("list is Empty");
+            return;
+        }
+
          head=head.next;
+     }
+
+     public void deleteAtEnding(){
+
+        Node temp=head;
+         while (temp.next.next!=null){
+             temp=temp.next;
+         }
+
+         temp.next=null;
      }
 }

@@ -8,7 +8,11 @@ public class Main {
         ll.insertAtBeginning(20);
         ll.insertAtBeginning(30);
 
-        ll.insertAtEnding (40);
+       // ll.insertAtEnding (40);
+
+        //ll.traverse ();
+
+        ll.deleteAtEnding ();
 
         ll.traverse ();
     }
