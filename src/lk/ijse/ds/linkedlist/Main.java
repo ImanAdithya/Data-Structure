@@ -15,8 +15,8 @@ public class Main {
        // ll.deleteAtEnding ();
 
         //ll.traverse ();
-        System.out.println (ll.size ());
-        ll.clear ();
-        ll.traverse ();
+       // ll.traverse ();
+
+        System.out.println (ll.get (2));
     }
 }

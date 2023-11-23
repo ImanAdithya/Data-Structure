@@ -112,4 +112,15 @@ public class LinkedList {
       head=null;
 
      }
+     public int get(int index){
+
+        Node temp=head;
+
+         for (int i = 0; i < index-1; i++) {
+             temp=temp.next;
+         }
+
+         return temp.data;
+
+     }
 }
