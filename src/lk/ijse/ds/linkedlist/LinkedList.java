@@ -83,4 +83,16 @@ public class LinkedList {
 
          temp.next=null;
      }
+
+     public void deleteAtPosition(int index){
+        Node temp=head;
+
+         for (int i = 0; i < index-1; i++) {
+             temp=temp.next;
+         }
+
+         temp.next=temp.next.next;
+
+
+     }
 }
