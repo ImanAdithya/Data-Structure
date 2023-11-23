@@ -92,7 +92,24 @@ public class LinkedList {
          }
 
          temp.next=temp.next.next;
+     }
 
+     public int size(){
+
+        Node temp=head;
+
+        int i=0;
+
+        while (temp!=null){
+            temp=temp.next;
+            i++;
+        }
+        return i;
+     }
+
+     public void clear(){
+
+      head=null;
 
      }
 }
